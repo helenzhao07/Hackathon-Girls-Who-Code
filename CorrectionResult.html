@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result without input</title>
+    <link rel="stylesheet" href="../static/Page.css">
+    <link href='https://fonts.googleapis.com/css?family=DotGothic16' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="p1">
+            DictAction
+        </div>
+    </header>
+    <br>
+    <div class="row">
+        <div class="column">
+            Corrections
+            <div class="text" style="background-color:#e5e5e5;">
+                {% for word in corrected_version%}
+                    <p style=`color: ${word.color};`>
+                        {{word.text}}
+                    </p>
+                {% endfor %}
+                {{corrected_version}}
+            </div>
+        </div>
+        <div class="column">
+            Correct text
+            <div class="text" style="background-color:#e5e5e5;">
+                {{message}}
+            </div>
+        </div>
+      </div>
+    <div class="indent">
+        Mark:
+    </div>
+    <div class="right">
+        <a href="ChooseType.html" class="button-link">
+            <button class="button">New Dictation</button>
+        </a>
+    </div>
+</body>
+</html>
